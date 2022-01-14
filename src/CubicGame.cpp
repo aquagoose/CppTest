@@ -47,9 +47,12 @@ void CubicGame::Run()
 
     glfwShowWindow(_window);
 
+    Time::Start();
+
     while (!glfwWindowShouldClose(_window))
     {
         glfwPollEvents();
+        Time::Update(glfwGetTime());
 
         glClear(GL_COLOR_BUFFER_BIT);
         Update();

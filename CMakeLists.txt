@@ -3,7 +3,7 @@ project(Cubic)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(${PROJECT_NAME} src/main.cpp src/CubicGame.cpp include/CubicGame.h src/Texture2D.cpp include/Texture2D.h src/Shader.cpp include/Shader.h src/SpriteRenderer.cpp include/SpriteRenderer.h)
+add_executable(${PROJECT_NAME} src/main.cpp src/CubicGame.cpp include/CubicGame.h src/Texture2D.cpp include/Texture2D.h src/Shader.cpp include/Shader.h src/SpriteRenderer.cpp include/SpriteRenderer.h src/Time.cpp include/Time.h)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)

@@ -5,6 +5,7 @@
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
+#include "../include/Time.h"
 
 class MyGame : public CubicGame
 {
@@ -29,7 +30,7 @@ public:
 
     void Update() override
     {
-        _pos += glm::vec2(1);
+        _pos += glm::vec2(500 * Time::DeltaTime(), 0);
     }
 
     void Draw() override

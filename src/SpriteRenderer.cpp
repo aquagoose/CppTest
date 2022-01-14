@@ -49,7 +49,7 @@ void SpriteRenderer::Begin(glm::mat4 transform)
     _begun = true;
 
     _shader->Use();
-    _shader->SetUniform("uProjectionView", _projection);
+    _shader->SetUniform("uProjectionView", _projection * transform);
 
     glBindVertexArray(_vao);
     glBindBuffer(GL_ARRAY_BUFFER, _vbo);
@@ -126,5 +126,8 @@ void SpriteRenderer::Flush()
 
 SpriteRenderer::~SpriteRenderer()
 {
+    glDeleteVertexArrays(1, &_vao);
+    glDeleteBuffers(1, &_vbo);
+    glDeleteBuffers(1, &_ebo);
     delete _shader;
 }
